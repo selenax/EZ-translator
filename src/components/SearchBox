@@ -1,5 +1,0 @@
-function SearchBox() {
-    <div>search term</div>
-}
-
-export default SearchBox;
