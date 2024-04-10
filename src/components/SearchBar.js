@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 function SearchBar({ onSubmit }) {
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
 
+  // pass back input value to parent by calling onSubmit
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit(text);
   };
 
+  // capture input value and assign to state
   const handleChange = (e) => {
     setText(e.target.value);
   };

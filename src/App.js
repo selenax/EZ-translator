@@ -1,9 +1,20 @@
 import { useState } from "react";
-import SearchBox from "./components/SearchBox";
+import SearchBar from "./components/SearchBar";
+import searchAPI from "./api";
 
 function App() {
-  // const [text, setText] = useState("");
-  return <div>{<SearchBox />}</div>;
+  const [images, setImages] = useState([]);
+
+  // received text from child component in input field
+  // pass to search api function
+  const handleSearch = (text) => {
+    searchAPI(text);
+  };
+  return (
+    <div>
+      <SearchBar onSubmit={handleSearch} />
+    </div>
+  );
 }
 
 export default App;
