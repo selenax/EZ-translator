@@ -1,7 +1,16 @@
-import React from 'react';
+import { useState } from 'react';
+import SearchBox from './components/SearchBox'
 
 function App() {
-  return <input placeholder="message" />
+  const [text, setText] = useState('');
+
+  return (
+    <div>
+      <SearchBox />
+    </div>
+
+
+  )
 }
 
 
