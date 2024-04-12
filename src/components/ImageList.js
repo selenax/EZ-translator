@@ -1,10 +1,11 @@
+import './ImageList.css';
 import ImageItem from './ImageItem';
 
 function ImageList({ images }) {
-  const imageList = images.map((image, i) => {
-    return <ImageItem key={i} image={image} />;
+  const imageList = images.map((image) => {
+    return <ImageItem key={image.id} image={image} />;
   });
-  return <div>{imageList}</div>;
+  return <div className="image-list">{imageList}</div>;
 }
 
 export default ImageList;

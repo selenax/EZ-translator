@@ -1,8 +1,8 @@
 function ImageItem({ image }) {
-  const alt = image.match(/([^/]+$)/)[0];
+  // const alt = image.match(/([^/]+$)/)[0];
   return (
     <div>
-      <img src={image} alt={alt} />
+      <img src={image.urls.small} alt={image.alt_description} />
     </div>
   );
 }

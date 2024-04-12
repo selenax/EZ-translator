@@ -1,10 +1,16 @@
 import axios from 'axios';
 
 const searchAPI = async (text) => {
-  const response = await axios.get(`https://dog.ceo/api/breed/${text}/images`);
+  const response = await axios.get('https://api.unsplash.com/search/photos', {
+    headers: {
+      Authorization: 'Client-ID _RIsfjjJ_L7hoFmDHlPL6DvHCQLvgsY_1L4IazJ8RMQ',
+    },
+    params: {
+      query: text,
+    },
+  });
 
-  // console.log(response);
-  return response.data.message;
+  return response.data.results;
 };
 
 export default searchAPI;
