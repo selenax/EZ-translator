@@ -1,0 +1,11 @@
+.search-bar {
+    padding: 20px 0
+}
+
+.search-bar form {
+    display: flex;
+}
+
+.search-bar input {
+    padding: 5px; 
+}
