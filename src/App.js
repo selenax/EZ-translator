@@ -12,6 +12,8 @@ function App() {
     const result = await searchAPI(text);
     setImages(result);
   };
+
+  
   return (
     <div>
       <SearchBar onSubmit={handleSearch} />
