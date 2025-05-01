@@ -1,4 +1,4 @@
-import '../css/ImageList.css';
+import '../style/ImageList.css';
 import ImageItem from './ImageItem';
 
 function ImageList({ images }) {
